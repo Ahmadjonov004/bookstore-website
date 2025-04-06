@@ -1,0 +1,89 @@
+
+/* === FLEX LAYOUTS === */
+.flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  .flex-column {
+    @apply flex flex-col;
+  }
+  .flex-row {
+    @apply flex flex-row;
+  }
+  .flex-wrap {
+    @apply flex flex-wrap;
+  }
+  
+  /* === GRID LAYOUTS === */
+  .grid-cols-2 {
+    @apply grid grid-cols-2 gap-4;
+  }
+  .grid-cols-3 {
+    @apply grid grid-cols-3 gap-4;
+  }
+  .grid-cols-4 {
+    @apply grid grid-cols-4 gap-6;
+  }
+  
+  /* === PADDING & MARGIN === */
+  .px-section {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12;
+  }
+  .py-section {
+    @apply py-4 sm:py-6 md:py-8 lg:py-12;
+  }
+  .container-padding {
+    @apply px-4 md:px-8 lg:px-16;
+  }
+  
+  /* === BUTTON STYLES === */
+  .btn {
+    @apply px-4 py-2 font-semibold text-white transition-all duration-200 rounded-lg;
+  }
+  .btn-primary {
+    @apply btn bg-primary hover:bg-blue-700;
+  }
+  .btn-secondary {
+    @apply btn bg-secondary hover:bg-yellow-600;
+  }
+  .btn-danger {
+    @apply btn bg-danger hover:bg-red-600;
+  }
+  .btn-success {
+    @apply btn bg-success hover:bg-green-600;
+  }
+  
+  /* === TEXT STYLES === */
+  .text-title {
+    @apply text-xl font-bold text-dark;
+  }
+  .text-subtitle {
+    @apply text-lg font-semibold text-gray-700;
+  }
+  .text-body {
+    @apply text-base text-gray-600;
+  }
+  .text-muted {
+    @apply text-sm text-gray-500;
+  }
+  
+  /* === BORDER & SHADOWS === */
+  .card {
+    @apply p-4 bg-white rounded-lg shadow-md;
+  }
+  .card-hover {
+    @apply transition-shadow duration-200 card hover:shadow-lg;
+  }
+  .border-rounded {
+    @apply border border-gray-300 rounded-lg;
+  }
+  
+  /* === TRANSITIONS & EFFECTS === */
+  .transition-base {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  .transition-fade {
+    @apply transition-opacity duration-200 ease-in-out;
+  }
