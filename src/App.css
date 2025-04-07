@@ -16,5 +16,9 @@ body {
   font-size: 25px;
 }
 .banner{
-  border: 1px solid red;
+  position: relative;
+}
+.bannerRek{
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
