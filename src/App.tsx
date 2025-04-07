@@ -1,12 +1,14 @@
 
 import "./App.css"
+import Banner from "./components/banner/Banner"
+import Header from "./components/header/Header"
 import "./index.css"
-import Products from "./pages/products/Products"
-import ColorButtons from "./ui/Button"
 function App() {
   return (
     <div>
-      <ColorButtons/>
+      <Header/>
+      {/* banner */}
+      <Banner/>
     </div>
   )
 }

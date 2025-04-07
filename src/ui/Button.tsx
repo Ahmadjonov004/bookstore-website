@@ -1,11 +1,9 @@
 
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 
-export default function ColorButtons() {
+function Btn() {
   return (
-    <Stack direction="row" spacing={2}>
-      <Button color="secondary">Secondary</Button>
-    </Stack>
-  );
+    <button className=" text-base font-light bg-blackrounded-lgbg-black text-white py-2 px-4 rounded-2xl hover:bg-white hover:text-black transition duration-300">Sotib olish</button>
+  )
 }
+
+export default Btn
