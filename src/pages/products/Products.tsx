@@ -13,9 +13,10 @@ function Products() {
     }, {}, {}, {}, {}, ])
   return (
     <div>
+      <h1>Mahsulotlar</h1>
         <div className="filterProduct"></div>
         {productData.map((product) => (
-            <Product key={product.id} product={product} />
+            <Product key={product.id}  />
         ))}
     </div>
   )

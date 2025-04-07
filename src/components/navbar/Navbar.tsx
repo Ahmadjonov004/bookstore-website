@@ -21,7 +21,7 @@ function Navbar() {
               <div className="flex items-center justify-center cursor-pointer phone">
               <MdLocalPhone />
               &nbsp;
-              <p>+998999999999</p>
+              <p className="text-sm">+998999999999</p>
               </div>
             </div>
           </div>

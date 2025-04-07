@@ -14,7 +14,7 @@ function Banner() {
           olishga ulgurib qoling</p>
           <Btn />
           <img src={bannerImg} alt="banner" className="bannerImg absolute top-0 right-[10px]" />
-          <h3 className="bannerRek uppercase bg-[#FF2020] py-[10px] px-[20px] absolute top-0 left-0 text-white text-base font-bold ">chegirma</h3>
+          <h3 className="bannerRek uppercase bg-[#FF2020] py-[10px] px-[20px] absolute top-0 left-0 text-white text-base font-semibold ">chegirma</h3>
         </div>
       </div>
     </div>
