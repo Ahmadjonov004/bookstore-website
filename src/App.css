@@ -22,3 +22,8 @@ body {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.FooterBanner{
+  background-image: url(./assets/images/buyurtmaQilish.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
