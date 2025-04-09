@@ -1,9 +1,10 @@
 import { CgMail } from "react-icons/cg";
-import { CiLocationOn } from "react-icons/ci";
+import { CiFacebook, CiLocationOn } from "react-icons/ci";
+import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="FooterComponent w-full mb-12">
+    <div className="FooterComponent w-full mb-4">
       <div className="container max-w-6xl mx-auto my-0">
         <div className="Footer w-full flex justify-between pb-[60px]">
           <div className="firstItem flex flex-col gap-[20px]">
@@ -46,13 +47,16 @@ function Footer() {
           </div>
         </div>
         <hr />
-        <div className="footerBottom flex justify-between">
+        <div className="footerBottom flex justify-between pt-4 items-center ">
           <div className="text-xs font-normal text-[#808080]">
           © 2024. ООО "Eshikrom store"
           </div>
           <div className="text-xs font-normal text-[#808080]">Ommaviy oferta </div>
           <div className="text-xs font-normal text-[#808080]">Maxfiylik siyosati</div>
-          <div className="telegram">
+          <div className="flex text-xl gap-3 text-[#808080]">
+          <a href="#"><FaTelegramPlane /></a>
+           <a href="#"><CiFacebook /></a>
+          <a href="#"><FaInstagram /></a>
           </div>
         </div>
       </div>
