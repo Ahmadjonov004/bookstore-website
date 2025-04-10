@@ -19,7 +19,7 @@ function Collection() {
               </div>
               <div className="flex flex-wrap gap-[30px]">
                 <img src={kreslo} alt="#"  className="w-full max-w-[560px]"/>
-                <img src={bolacha} alt="#" className="w-full max-w-[560px]" />
+                <img src={bolacha} alt="#" className="w-full max-w-[400px] md:max-w-[560px]" />
               </div>
             </div>
             
