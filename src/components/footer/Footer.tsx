@@ -54,9 +54,9 @@ function Footer() {
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Ommaviy oferta </div>
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Maxfiylik siyosati</div>
           <div className="flex text-xl gap-3 text-[#808080]">
-          <a href="#"><FaTelegramPlane /></a>
-           <a href="#"><CiFacebook /></a>
-          <a href="#"><FaInstagram /></a>
+          <a href="https://t.me/ahmadjonov004"><FaTelegramPlane /></a>
+           <a href="https://www.facebook.com/ahmdjonov004"><CiFacebook /></a>
+          <a href="https://www.instagram.com/ahmadjonov004/"><FaInstagram /></a>
           </div>
         </div>
       </div>
