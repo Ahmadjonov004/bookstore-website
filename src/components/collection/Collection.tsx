@@ -8,9 +8,9 @@ function Collection() {
   return (
     <div>
       <div className="collectionComponents w-full ">
-        <div className="container  max-w-6xl mx-auto my-0">
+        <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
           <div className="collection w-full">
-            <h1 className="text-4xl font-medium mt-[60px] mb-[30px]">Kolleksiyalar</h1>
+            <h1 className="text-3xl md:text-4xl font-medium mt-[40px] md:mt-[60px] mb-[30px]">Kolleksiyalar</h1>
             <div className="flex flex-col gap-[30px] mb-[60px]">
               <div className="flex flex-wrap gap-[20px]">
                 <img src={kitchen} alt="#" className="w-full max-w-[370px]" />

@@ -8,18 +8,18 @@ function Header() {
     <div>
       <Navbar />
       <div className="headerSection w-full mt-2">
-        <div className="container max-w-6xl mx-auto my-0 ">
-          <div className="header flex items-center justify-between w-full py-3">
+        <div className="container max-w-[1200px] px-[10px] mx-auto my-0 ">
+          <div className="header flex items-center justify-between w-full py-2 md:py-3">
             <div className="logo text-xl font-bold">ESHIK DERAZA</div>
-            <div className="flex items-center justify-between py-2 px-4 border-2 search rounded-xl">
+            <div className= "hidden md:flex items-center justify-between py-2 px-4 border-2 search rounded-xl">
               <input
                 type="text"
                 placeholder="Nomi va turi bo’yicha qidiruv"
-                className="border-none inputSearch outline-none w-[500px] text-base "
+                className="border-none inputSearch outline-none hidden md:block md:w-[500px] text-base "
               />
-              <CiSearch className="text-2xl" />
+              <CiSearch className= "text-xl md:text-2xl " />
             </div>
-            <div className="ietms flex gap-5 items-center justify-center ">
+            <div className="ietms flex gap-3 md:gap-5 items-center justify-center ">
               <div className="shopIcon">
                 <MdOutlineShoppingBag className="text-2xl" />
               </div>
