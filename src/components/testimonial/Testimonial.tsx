@@ -45,8 +45,8 @@ function Testimonial() {
   return (
     <div className="faqSection w-full">
       <div className="container max-w-[1200px] px-[10px] mx-auto my-0  ">
-        <h1 className="text-[35px] font-medium mb-8">Mijozlar fikri</h1>
-        <div className="faq w-full flex gap-[30px] justify-between items-center  mb-[90px]">
+        <h1 className="text-[35px] font-medium mb-8 mt-8">Mijozlar fikri</h1>
+        <div className="faq w-full flex gap-[30px]  justify-between items-center  mb-[90px]">
           <div className="carousel w-full ">
             <Carousel
               opts={{

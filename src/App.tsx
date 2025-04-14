@@ -4,6 +4,7 @@ import FooterBanner from "./components/banner/FooterBanner"
 import Collection from "./components/collection/Collection"
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
+import Products from "./components/products/Products"
 import Testimonial from "./components/testimonial/Testimonial"
 import "./index.css"
 function App() {
@@ -16,6 +17,9 @@ function App() {
 
       {/* collection */}
       <Collection/>
+
+      {/* products */}
+      <Products/>
 
       {/* testimanial */}
       <Testimonial/>
