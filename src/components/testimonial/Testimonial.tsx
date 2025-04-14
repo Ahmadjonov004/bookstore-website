@@ -55,7 +55,7 @@ function Testimonial() {
               orientation="vertical"
               className="w-full "
             >
-              <CarouselContent className="-mt-1   max-h-[500px] flex gap-[15px]">
+              <CarouselContent className="-mt-1 max-h-[240px]  md:max-h-[500px] flex gap-[15px] ">
                 {testimonials.map((item, index) => (
                   <CarouselItem key={index} className="pt-1 md:basis-1/2 bg-[#F3F3F3] rounded-[20px]">
                     <div className="p-1 flex-col items-start border rounded-[10px] py-[30px] pl-[30px] pr-[50px] ">
@@ -76,7 +76,7 @@ function Testimonial() {
             </Carousel>
           </div>
 
-          <div className="faqImg w-full max-w-[670px] rounded-[20px]">
+          <div className="faqImg w-full max-w-[670px] rounded-[20px] hidden md:block">
             <img src={faqImg} alt="faqImg" />
           </div>
         </div>

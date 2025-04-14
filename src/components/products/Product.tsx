@@ -1,10 +1,8 @@
 import {
   FaRegComment,
   FaRegHeart,
-  FaRegStar,
   FaShoppingBag,
   FaStar,
-  FaStarHalf,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 interface ProductProps {
@@ -31,7 +29,7 @@ function Product({
 }: ProductProps) {
   const navigate = useNavigate();
   return (
-    <div className="w-full max-w-[370px] shadow-[0_5px_15px_rgba(0,0,0,0.15)] rounded-[6px]">
+    <div className="w-full shadow-[0_5px_15px_rgba(0,0,0,0.15)] rounded-[6px] ">
       <div className="relative bg-[#EDEEF2] rounded-tl-[6px] rounded-tr-[6px]">
         {discount && <div className="discount">{discount}</div>}
         <img src={image} alt={name} />
@@ -70,7 +68,7 @@ function Product({
             {comments} <FaRegComment className="text-[12px]"/>
           </div>
         </div>
-        <div className="flex items-center jus  text-white p-[10px] bg-[#141311] text-[24px] rounded-[8px]"><FaShoppingBag /></div>
+        <div className="p-[10px]  bg-[#141311] flex items-center justify-center text-white  text-[24px] rounded-[8px]"><FaShoppingBag  className="  "/></div>
         </div>
       </div>
     </div>
