@@ -4,6 +4,7 @@ import FooterBanner from "./components/banner/FooterBanner"
 import Collection from "./components/collection/Collection"
 import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
+import Testimonial from "./components/testimonial/Testimonial"
 import "./index.css"
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
 
       {/* collection */}
       <Collection/>
+
+      {/* testimanial */}
+      <Testimonial/>
 
       {/* footer banner or order */}
       <FooterBanner/>
