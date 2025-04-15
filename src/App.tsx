@@ -1,34 +1,13 @@
+
 import "./App.css"
-import Banner from "./components/banner/Banner"
-import FooterBanner from "./components/banner/FooterBanner"
-import Collection from "./components/collection/Collection"
-import Footer from "./components/footer/Footer"
-import Header from "./components/header/Header"
-import Products from "./components/products/Products"
-import Testimonial from "./components/testimonial/Testimonial"
 import "./index.css"
+import Homes from "./pages/Home"
+import ProductDetailPage from "./pages/ProductDetailPage"
 function App() {
   return (
     <div>
-      <Header/>
-
-      {/* banner */}
-      <Banner/>
-
-      {/* collection */}
-      <Collection/>
-
-      {/* products */}
-      <Products/>
-
-      {/* testimanial */}
-      <Testimonial/>
-
-      {/* footer banner or order */}
-      <FooterBanner/>
-
-      {/* footer */}
-      <Footer/>
+      {/* <Homes/> */}
+      <ProductDetailPage/>
     </div>
   )
 }
