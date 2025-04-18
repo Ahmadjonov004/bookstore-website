@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import RegisterModal from "./components/register/RegisterModal";
-import ProfileForm from "./components/profil/ProfileForm";
+import Profil from "./pages/Profil";
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -36,7 +36,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home isRegistered={isRegistered} onLoginClick={() => setShowModal(true)}/>}/>
         <Route path="/productDetail/:slug" element={<ProductDetailPage />} />
-        <Route path="/profil" element={<ProfileForm/>}/>
+        <Route path="/profil" element={<Profil/>}/>
       </Routes>
     </>
   );

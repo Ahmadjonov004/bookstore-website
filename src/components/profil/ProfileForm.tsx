@@ -31,7 +31,7 @@ export default function ProfileForm() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-8">
+    <section className="max-w-[1200px] mx-auto px-4 py-8 border-b-2 mb-[30px]">
       <p className="text-sm text-gray-500 mb-1">Bosh sahifa • Profile</p>
       <h1 className="text-3xl font-semibold mb-2">{form.firstName}</h1>
       <p className="text-gray-600 mb-6">Sozlamalar</p>
