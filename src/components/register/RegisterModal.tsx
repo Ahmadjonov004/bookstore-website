@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import SmsVerificationModal from '../smsCodeModal/SmsCodeModal'; 
 const LOCAL_STORAGE_KEY = "registerModal";
+
 interface RegisterModalProps {
   onClose: () => void;
   onSuccess: () => void;
@@ -10,36 +12,34 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('+998');
   const [accepted, setAccepted] = useState(false);
-
-  const [form, setForm] = useState({
-    fullName: "",
-    address: "",
-    phone:"",
-  });
+  const [showSmsModal, setShowSmsModal] = useState(false);
 
   useEffect(() => {
-      const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
-      if (savedData) {
-        setForm(JSON.parse(savedData));
-      }
-    }, []);
+    const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
+      setFullName(parsed.fullName || '');
+      setAddress(parsed.address || '');
+      setPhone(parsed.phone || '+998');
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(form));
     e.preventDefault();
-    
-    if (accepted) {
-      console.log({ fullName, address, phone });
-      onSuccess(); 
-    } else {
+
+    if (!accepted) {
       alert("Iltimos, ommaviy ofertaga rozilik bering.");
+      return;
     }
+
+    const form = { fullName, address, phone };
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(form));
+    setShowSmsModal(true); // show modal
   };
-  
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 relative">
-       
         <button
           onClick={onClose}
           className="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
@@ -118,6 +118,15 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
           </button>
         </form>
       </div>
+
+      {/* ✅ SMS MODAL SHU YERDA KO‘RSATILADI */}
+      {showSmsModal && (
+        <SmsVerificationModal
+          phone={phone}
+          onClose={() => setShowSmsModal(false)}
+          onSuccess={onSuccess}
+        />
+      )}
     </div>
   );
 };
