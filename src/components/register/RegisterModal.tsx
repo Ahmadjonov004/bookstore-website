@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+const LOCAL_STORAGE_KEY = "registerModal";
 interface RegisterModalProps {
   onClose: () => void;
   onSuccess: () => void;
@@ -11,8 +11,23 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
   const [phone, setPhone] = useState('+998');
   const [accepted, setAccepted] = useState(false);
 
+  const [form, setForm] = useState({
+    fullName: "",
+    address: "",
+    phone:"",
+  });
+
+  useEffect(() => {
+      const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (savedData) {
+        setForm(JSON.parse(savedData));
+      }
+    }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(form));
     e.preventDefault();
+    
     if (accepted) {
       console.log({ fullName, address, phone });
       onSuccess(); 
@@ -20,7 +35,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
       alert("Iltimos, ommaviy ofertaga rozilik bering.");
     }
   };
-
+  
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 relative">

@@ -16,6 +16,13 @@ const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
+    const storedLogin = localStorage.getItem("isLoggedIn");
+    if (storedLogin === "true") {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  useEffect(() => {
     setIsLoggedIn(isRegistered);
   }, [isRegistered]);
 

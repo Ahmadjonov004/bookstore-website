@@ -5,6 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import RegisterModal from "../register/RegisterModal";
 import Navbar from "../navbar/Navbar";
 import "../../App.css";
+import { useNavigate } from "react-router-dom";
 
 // 1. Props interfeysini aniqlang
 interface HeaderProps {
@@ -36,7 +37,7 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
     localStorage.setItem("isLoggedIn", "true");
     setShowRegisterModal(false);
   };
-
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -63,7 +64,7 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
               </div>
 
               {isLoggedIn ? (
-                <div className="profilImage">
+                <div className="profilImage " onClick={() => navigate(`/profil`)}>
                   <img
                     src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-male-user-profile-vector-illustration-isolated-background-man-profile-sign-business-concept_157943-38764.jpg"
                     alt="Profile"

@@ -5,10 +5,21 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import RegisterModal from "./components/register/RegisterModal";
+import ProfileForm from "./components/profil/ProfileForm";
+import Header from "./components/header/Header";
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const storedLogin = localStorage.getItem("isLoggedIn");
+    if (storedLogin === "true") {
+      setIsLoggedIn(true);
+    }
+  }, []);
+  
 
   useEffect(() => {
     const isUserRegistered = localStorage.getItem("userRegistered") === "true";
@@ -27,21 +38,15 @@ const App: React.FC = () => {
 
   return (
     <>
+    <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} onLoginClick={() => {}} />
       {showModal && (
         <RegisterModal onClose={handleClose} onSuccess={handleSuccess} />
       )}
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              isRegistered={isRegistered}
-              onLoginClick={() => setShowModal(true)}
-            />
-          }
-        />
-        <Route path="/productDetail" element={<ProductDetailPage />} />
+        <Route path="/" element={<Home isRegistered={isRegistered} onLoginClick={() => setShowModal(true)}/>}/>
+        <Route path="/productDetail/:slug" element={<ProductDetailPage />} />
+        <Route path="/profil" element={<ProfileForm/>}/>
       </Routes>
     </>
   );
