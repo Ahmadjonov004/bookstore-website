@@ -5,32 +5,48 @@ import Products from "@/components/products/Products";
 import Testimonial from "@/components/testimonial/Testimonial";
 import FooterBanner from "@/components/banner/FooterBanner";
 import Footer from "@/components/footer/Footer";
+import { useState, useEffect } from "react";
 
-function Homes() {
+interface HomeProps {
+  isRegistered: boolean;
+  onLoginClick: () => void;
+}
+
+const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setIsLoggedIn(isRegistered);
+  }, [isRegistered]);
+
   return (
     <div>
-      {/* header */}
-      <Header />
+      {/* Header */}
+      <Header
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+        onLoginClick={onLoginClick}
+      />
 
-      {/* banner */}
+      {/* Banner */}
       <Banner />
 
-      {/* collection */}
+      {/* Collection */}
       <Collection />
 
-      {/* products */}
+      {/* Products */}
       <Products />
 
-      {/* testimanial */}
+      {/* Testimonials */}
       <Testimonial />
 
-      {/* footer banner or order */}
+      {/* Footer Banner */}
       <FooterBanner />
 
-      {/* footer */}
+      {/* Footer */}
       <Footer />
     </div>
   );
-}
+};
 
-export default Homes;
+export default Home;

@@ -4,7 +4,9 @@ import {
   FaShoppingBag,
   FaStar,
 } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
+
 interface ProductProps {
   image: string;
   name: string;
@@ -39,7 +41,7 @@ function Product({
         <div className=" ">
           <div className="flex-col ">
             <h4
-              onClick={() => navigate(`/product-delail/${name}`)}
+              
               className="font-medium text-[18px]"
             >
               {name}
@@ -60,6 +62,7 @@ function Product({
             <div className="stars flex justify-start items-center gap-1">
               <FaStar className="text-[#EDCF5D] " />
               <FaStar className="text-[#EDCF5D] " />
+              
               <FaStar className="text-[#EDCF5D] " />
               <FaStar className="text-[#EDCF5D] " />
               <FaStar className="text-[#EDCF5D] " />
@@ -68,7 +71,7 @@ function Product({
               {comments} <FaRegComment className="text-[12px]" />
             </div>
           </div>
-          <div className="p-[10px]  bg-[#141311] flex items-center justify-end  text-[24px] rounded-[8px] border hover:bg-white  text-white hover:text-black transition-all duration-300  ">
+          <div className="p-[10px]  bg-[#141311] flex items-center justify-end  text-[24px] rounded-[8px] border hover:bg-white  text-white hover:text-black transition-all duration-300  " onClick={() => navigate(`/productDetail/${name}`)}>
             <FaShoppingBag className="  " />
           </div>
         </div>
