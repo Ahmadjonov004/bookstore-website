@@ -34,7 +34,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
 
     const form = { fullName, address, phone };
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(form));
-    setShowSmsModal(true); // show modal
+    setShowSmsModal(true);
   };
 
   return (
@@ -119,7 +119,6 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
         </form>
       </div>
 
-      {/* ✅ SMS MODAL SHU YERDA KO‘RSATILADI */}
       {showSmsModal && (
         <SmsVerificationModal
           phone={phone}
