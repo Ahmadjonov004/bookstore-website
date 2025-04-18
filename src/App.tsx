@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import RegisterModal from "./components/register/RegisterModal";
 import Profil from "./pages/Profil";
+import ProductAddPage from "./components/adminPanel/ProductAddPage";
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home isRegistered={isRegistered} onLoginClick={() => setShowModal(true)}/>}/>
         <Route path="/productDetail/:slug" element={<ProductDetailPage />} />
         <Route path="/profil" element={<Profil/>}/>
+        <Route path="/addProduct" element={<ProductAddPage/>} />
       </Routes>
     </>
   );

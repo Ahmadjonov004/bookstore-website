@@ -59,7 +59,7 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
               <div className="shopIcon">
                 <MdOutlineShoppingBag className="text-2xl" />
               </div>
-              <div className="likeIcon">
+              <div className="likeIcon" onClick={() => navigate(`/addProduct`)}>
                 <FaRegHeart className="text-xl" />
               </div>
 

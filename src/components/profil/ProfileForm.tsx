@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LOCAL_STORAGE_KEY = "profileData";
 
@@ -10,6 +11,8 @@ export default function ProfileForm() {
     address: "",
     phone: "",
   });
+
+  const navigate = useNavigate()
 
   // Ma'lumotlarni localStorage'dan olish
   useEffect(() => {
@@ -32,7 +35,10 @@ export default function ProfileForm() {
 
   return (
     <section className="max-w-[1200px] mx-auto px-4 py-8 border-b-2 mb-[30px]">
-      <p className="text-sm text-gray-500 mb-1">Bosh sahifa • Profile</p>
+      <div className="flex justify-start items-center gap-1 ">
+      <p className="text-sm text-gray-500 mb-1 cursor-pointer" onClick={() => navigate('/')}>Bosh sahifa • </p>
+      <p className="text-sm text-gray-500 mb-1 cursor-pointer">Profil  </p>
+      </div> 
       <h1 className="text-3xl font-semibold mb-2">{form.firstName}</h1>
       <p className="text-gray-600 mb-6">Sozlamalar</p>
 
