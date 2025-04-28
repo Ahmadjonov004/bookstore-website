@@ -7,39 +7,39 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
 const testimonials = [
   {
     name: "Ali Valiyev",
-    position: "Frontend Developer",
+    position: "Kitobxon",
     message:
-      "“Just wanted to drop a note to say how impressed I was with your customer service team. They solved my issuein no time and made sure I was happy every step!”",
+      "“Uzoq vaqt izlagan kitobimni shu do‘kondan topdim! Narxlari hamyonbop va yetkazib berish juda tez edi. Albatta yana buyurtma beraman.”",
   },
   {
     name: "Dilnoza Karimova",
-    position: "Product Manager",
+    position: "O‘qituvchi",
     message:
-      "“Just wanted to drop a note to say how impressed I was with your customer service team. They solved my issuein no time and made sure I was happy every step!”",
+      "“Bolalar uchun ertak kitoblari sifati juda zo‘r! O‘g‘lim ham, men ham juda mamnunmiz. Xizmat darajasi a'lo darajada.”",
   },
   {
     name: "Jamshid Rustamov",
-    position: "UI/UX Designer",
+    position: "Talaba",
     message:
-      "“Just wanted to drop a note to say how impressed I was with your customer service team. They solved my issuein no time and made sure I was happy every step!”",
+      "“Ilmiy kitoblar to‘plami juda boy. Imtihonlarga tayyorgarlik ko‘rayotganda aynan shu do‘kon menga katta yordam berdi.”",
   },
   {
     name: "Muhammad Ali",
-    position: "Fullstack Developer",
+    position: "Tadbirkor",
     message:
-      "“Just wanted to drop a note to say how impressed I was with your customer service team. They solved my issuein no time and made sure I was happy every step!”",
+      "“Biznes va motivatsion kitoblarni topish oson bo‘ldi. Yetkazib berish va mijozlarga xizmat darajasi meni hayratda qoldirdi.”",
   },
   {
-    name: "Zarina Rakhmatova",
-    position: "QA Engineer",
+    name: "Zarina Raxmatova",
+    position: "Ota-ona",
     message:
-      "“Just wanted to drop a note to say how impressed I was with your customer service team. They solved my issuein no time and made sure I was happy every step!”",
+      "“Har doim yangilangan yangi kitoblar kelib turadi. Oila a'zolarim bilan tez-tez buyurtma qilamiz. Juda minnatdorman!”",
   },
 ];
+
 
 function Testimonial() {
   return (

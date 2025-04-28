@@ -1,171 +1,190 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import productdetail from '../../assets/images/doors.png'
-interface Productproms {
-    id: number
-    image?: string
-    name?: string
-    size?: string
-    type?: string
-    label?: string
-    labelColor?: string
-    price?: string
-    oldPrice?: string
-    discount?: boolean
-    comments?: number
+import bookCover from '../../assets/images/doors.png'; // vaqtincha kitob rasmi sifatida
+// Agar asl kitob rasmlari bo'lsa, albatta o'shani ulab olasiz
+
+interface ProductProps {
+  id: number;
+  image?: string;
+  name?: string;
+  size?: string;
+  type?: string;
+  label?: string;
+  labelColor?: string;
+  price?: string;
+  oldPrice?: string;
+  discount?: boolean;
+  comments?: number;
 }
-const products = [
-    {
-        id: 1,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "MDF",
-        labelColor: "text-green-600",
-        price: "1 000 000 so‘m",
-        oldPrice: "1 200 000 so‘m",
-        discount: true,
-        comments: 40,
-    },
-    {
-        id: 2,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "AKFA",
-        labelColor: "text-green-500",
-        price: "1 200 000 so‘m",
-        comments: 40,
-    },
-    {
-        id: 3,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "MDF",
-        labelColor: "text-green-600",
-        price: "1 050 000 so‘m",
-        oldPrice: "1 300 000 so‘m",
-        discount: true,
-        comments: 30,
-    },
-    {
-        id: 4,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "AKFA",
-        labelColor: "text-green-500",
-        price: "1 150 000 so‘m",
-        comments: 35,
-    },
-    {
-        id: 5,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "MDF",
-        labelColor: "text-green-600",
-        price: "900 000 so‘m",
-        oldPrice: "1 100 000 so‘m",
-        discount: true,
-        comments: 28,
-    },
-    {
-        id: 6,
-        image: "/images/door1.png",
-        name: "MDF Eshiklar",
-        size: "120x200 sm",
-        type: "1 qanotli",
-        label: "AKFA",
-        discount: true,
-        labelColor: "text-green-500",
-        price: "1 300 000 so‘m",
-        comments: 50,
-    },
-]
+
+const products: ProductProps[] = [
+  {
+    id: 1,
+    image: "/images/door1.png",
+    name: "“Alkimyogar” — Paulo Coelho",
+    size: "Roman, 190 sahifa",
+    type: "Badiiy adabiyot",
+    label: "Bestseller",
+    labelColor: "text-green-600",
+    price: "90 000 so‘m",
+    oldPrice: "120 000 so‘m",
+    discount: true,
+    comments: 40,
+  },
+  {
+    id: 2,
+    image: "/images/door1.png",
+    name: "“Boy ota, Qashshoq ota” — Robert Kiyosaki",
+    size: "Motivatsiya, 280 sahifa",
+    type: "Biznes adabiyot",
+    label: "Moliyaviy erkinlik",
+    labelColor: "text-green-500",
+    price: "120 000 so‘m",
+    comments: 40,
+  },
+  {
+    id: 3,
+    image: "/images/door1.png",
+    name: "“Saboqlar kitobi” — Abdulla Qahhor",
+    size: "She'riy to‘plam, 150 sahifa",
+    type: "Badiiy adabiyot",
+    label: "Adabiy meros",
+    labelColor: "text-green-600",
+    price: "85 000 so‘m",
+    oldPrice: "110 000 so‘m",
+    discount: true,
+    comments: 30,
+  },
+  {
+    id: 4,
+    image: "/images/door1.png",
+    name: "“O‘tgan kunlar” — Abdulla Qodiriy",
+    size: "Roman, 320 sahifa",
+    type: "Badiiy adabiyot",
+    label: "O‘zbek adabiyoti",
+    labelColor: "text-green-500",
+    price: "100 000 so‘m",
+    comments: 35,
+  },
+  {
+    id: 5,
+    image: "/images/door1.png",
+    name: "“Sehrli ertaklar” — Bolalar uchun",
+    size: "Bolalar adabiyoti, 100 sahifa",
+    type: "Bolalar uchun",
+    label: "Bolalar",
+    labelColor: "text-green-600",
+    price: "70 000 so‘m",
+    oldPrice: "90 000 so‘m",
+    discount: true,
+    comments: 28,
+  },
+  {
+    id: 6,
+    image: "/images/door1.png",
+    name: "“Think and Grow Rich” — Napoleon Hill",
+    size: "Motivatsiya, 250 sahifa",
+    type: "Biznes adabiyot",
+    label: "Bestseller",
+    labelColor: "text-green-500",
+    price: "130 000 so‘m",
+    discount: true,
+    comments: 50,
+  },
+];
+
 function ProductDetail() {
-    const navigate = useNavigate()
-    const { id } = useParams();
-    const [product, setProduct] = useState<Productproms | null>(null)
-    useEffect(() => {
-        const resalt = products.find(prev => prev.id === Number(id))
-        setProduct(resalt || null)
-    })
-    return (
-        <div>
-            
-            <div className="container max-w-7xl mx-auto px-3 sm:px-5 md:px-10 mb-20">
-                <div className="flex flex-wrap gap-1 text-sm sm:text-base">
-                    <p onClick={() => navigate('/')} className="cursor-pointer text-[#6D6D6D] hover:text-dark">Bosh sahifa • </p>
-                    <p onClick={() => navigate('/')} className="cursor-pointer text-[#6D6D6D] hover:text-dark">Eshiklar • </p>
-                    <p onClick={() => navigate('/')} className="cursor-pointer text-[#6D6D6D] hover:text-dark">
-                        {product?.name} • {product?.type} {product?.label} eshik
-                    </p>
-                </div>
-                <div className="flex flex-col lg:flex-row gap-8 mt-5">
-                    <div className="w-full lg:w-1/2">
-                        <img src={productdetail} alt={product?.name} className="w-full object-cover rounded-md" />
-                    </div>
-                    <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-5">
-                        <div>
-                            <h3 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] font-medium text-[#141311]">
-                                {product?.name}
-                            </h3>
-                            <p className="text-[13px] sm:text-[14px] text-[#9E9E9E]">
-                                ⭐⭐⭐⭐⭐ {product?.comments} komment
-                            </p>
-                        </div>
-                        <h1 className="text-[30px] sm:text-[40px] md:text-[45px] font-bold text-[#141311]">
-                            {product?.price}
-                        </h1>
-                        <div>
-                            <p className="text-[16px] text-[#606060] mb-2">Rang</p>
-                            <div className="flex gap-3">
-                                <div className="cursor-pointer w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] border border-[#5A5A5A] rounded-lg bg-[#5D412A]"></div>
-                                <div className="cursor-pointer w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] border border-[#5A5A5A] rounded-lg bg-[#E3B90F]"></div>
-                                <div className="cursor-pointer w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] border border-[#5A5A5A] rounded-lg bg-[#FFFFFF]"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="text-[16px] text-[#606060] mb-2">O'lchamlar</p>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                                {["120x200 sm", "130x200 sm", "120x200 sm", "120x200 sm", "120x200 sm", "120x200 sm"].map((size, index) => (
-                                    <p
-                                        key={index}
-                                        className="py-2 px-3 border flex items-center justify-center text-[14px] sm:text-[16px] rounded-md hover:bg-[#444444] hover:text-white cursor-pointer text-[#494949] border-[#BEBEBE]"
-                                    >
-                                        {size}
-                                    </p>
-                                ))}
-                            </div>
-                        </div>
-                        <div>
-                            <p className="text-[16px] text-[#606060] mb-1">Brendlar</p>
-                            <span className="inline-block py-1 px-3 rounded-md bg-[#444444] text-[16px] text-white">
-                                {product?.label}
-                            </span>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                            <button className="w-full sm:w-auto py-4 px-6 text-[18px] text-white bg-[#444444] rounded-lg">
-                                Savatga qo‘shish
-                            </button>
-                            <button className="w-full sm:w-auto py-4 px-6 text-[18px] text-white bg-[#141311] rounded-lg">
-                                Sotib olish
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const [product, setProduct] = useState<ProductProps | null>(null);
 
-            
+  useEffect(() => {
+    const result = products.find((item) => item.id === Number(id));
+    setProduct(result || null);
+  }, [id]);
+
+  return (
+    <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Breadcrumbs */}
+      <div className="flex flex-wrap text-sm sm:text-base gap-1 mb-8">
+        <p onClick={() => navigate('/')} className="cursor-pointer text-gray-500 hover:text-black">
+          Bosh sahifa •
+        </p>
+        <p onClick={() => navigate('/')} className="cursor-pointer text-gray-500 hover:text-black">
+          Kitoblar •
+        </p>
+        <p className="text-gray-700">
+          {product?.name}
+        </p>
+      </div>
+
+      {/* Product Info */}
+      <div className="flex flex-col lg:flex-row gap-10">
+        {/* Image */}
+        <div className="w-full lg:w-1/2">
+          <img
+            src={product?.image || bookCover}
+            alt={product?.name}
+            className="w-full object-cover rounded-md shadow-md"
+          />
         </div>
-    )
+
+        {/* Details */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-6">
+          <div>
+            <h1 className="text-2xl md:text-4xl font-semibold text-gray-900">
+              {product?.name}
+            </h1>
+            <p className="text-sm text-gray-500 mt-2">
+              ⭐⭐⭐⭐⭐ ({product?.comments} ta sharh)
+            </p>
+          </div>
+
+          {/* Price */}
+          <div className="flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-gray-900">
+              {product?.price}
+            </h2>
+            {product?.oldPrice && (
+              <span className="text-xl line-through text-gray-400">
+                {product.oldPrice}
+              </span>
+            )}
+          </div>
+
+          {/* Book Details */}
+          <div>
+            <p className="text-gray-600 mb-2">Kitob turi:</p>
+            <span className="inline-block py-1 px-3 rounded-md bg-gray-800 text-white text-sm">
+              {product?.type}
+            </span>
+          </div>
+
+          <div>
+            <p className="text-gray-600 mb-2">Sahifalar soni:</p>
+            <p className="text-gray-700">{product?.size}</p>
+          </div>
+
+          <div>
+            <p className="text-gray-600 mb-2">Kategoriya:</p>
+            <span className={`inline-block py-1 px-3 rounded-md ${product?.labelColor}`}>
+              {product?.label}
+            </span>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <button className="w-full sm:w-auto bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition">
+              Savatga qo‘shish
+            </button>
+            <button className="w-full sm:w-auto bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-500 transition">
+              Hozir xarid qilish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default ProductDetail
+export default ProductDetail;

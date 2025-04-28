@@ -8,20 +8,25 @@ function Footer() {
       <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
         <div className="Footer w-full flex justify-between pb-[30px] md:pb-[60px]">
           <div className="firstItem flex flex-col gap-[20px]">
-            <div className="text-[20px] font-semibold md:font-bold uppercase">Eshik deraza</div>
+            <div className="text-[20px] font-semibold md:font-bold uppercase">BookShop</div>
             <div className="flex flex-col">
               <p className="text-xs md:text-sm font-light">Qo’llab quvvatlash</p>
-              <p className="text-xs md:text-[16px] font-medium cursor-pointer">+998976611747</p>
+              <a
+                  href="tel:+998976611747"
+                  className="text-xs md:text-[16px] font-medium cursor-pointer"
+                >
+                  +998976611747
+                </a>
             </div>
             <div className=" flex flex-col gap-[6px] ">
               <div className="flex ">
                 <CiLocationOn className="text-lg md:text-xl acas" />
-                <div className="text-xs md:text-[16px] font-normal cursor-pointer"> Toshkent</div>
+                <div className="text-xs md:text-[16px] font-normal cursor-pointer">Farg'ona</div>
               </div>
               <div className="flex ">
                 <CgMail className="text-xl  md:text-2xl cursor-pointer" />
                 <div className="text-xs md:text-[16px] font-normal cursor-pointer ">
-                Eshikrom@gmail.com
+                BookShop@gmail.com
                 </div>
               </div>
             </div>
@@ -49,7 +54,7 @@ function Footer() {
         <hr />
         <div className="footerBottom flex justify-between pt-4 items-center ">
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">
-          © 2024. ООО "Eshikrom store"
+          © 2025.  "Bookshop Store"
           </div>
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Ommaviy oferta </div>
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Maxfiylik siyosati</div>
