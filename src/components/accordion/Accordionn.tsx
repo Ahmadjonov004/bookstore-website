@@ -8,7 +8,7 @@ import {
 function Accordionn() {
   return (
     <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
-      <div className="text-[35px] font-medium mb-[15px]">Faq</div>
+      <div className="text-[25px] md:text-[35px] font-medium my-[10px]">Faq</div>
       <Accordion type="single" collapsible className="w-full max-w-[600px]">
         <AccordionItem value="item-1">
           <AccordionTrigger>📚 Qanday kitoblar mavjud?</AccordionTrigger>

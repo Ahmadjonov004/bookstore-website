@@ -1,4 +1,4 @@
-import Banner from "../components/banner/Banner";
+
 import Header from "../components/header/Header";
 import Products from "@/components/products/Products";
 import Testimonial from "@/components/testimonial/Testimonial";
@@ -6,6 +6,7 @@ import FooterBanner from "@/components/banner/FooterBanner";
 import Footer from "@/components/footer/Footer";
 import { useState, useEffect } from "react";
 import Accordionn from "@/components/accordion/accordionn";
+import SlideBanner from "@/components/banner/SlideBanner";
 
 interface HomeProps {
   isRegistered: boolean;
@@ -34,13 +35,12 @@ const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
         setIsLoggedIn={setIsLoggedIn}
         onLoginClick={onLoginClick}
       />
-
-      {/* Banner */}
-      <Banner />
+      {/* slide Banner */}
+      <SlideBanner/>
 
       {/* Products */}
       <Products />
-      
+
        {/* accordion */}
        <Accordionn/>
 
