@@ -29,10 +29,10 @@ function Product({
 }: ProductProps) {
   const navigate = useNavigate();
   return (
-    <div className="w-full shadow-[0_5px_15px_rgba(0,0,0,0.15)] rounded-[6px] ">
+    <div className="w-full shadow-custom rounded-[6px]  duration-300 hover ">
       <div className="relative bg-[#EDEEF2] rounded-tl-[6px] rounded-tr-[6px] "  onClick={() => navigate(`/productDetail/${name}`)}>
         {discount && <div className="discount">{discount}</div>}
-        <img src={image} alt={name}  className="h-64"/>
+        <img src={image} alt={name}  className="h-[160px] md:h-64"/>
         <FaRegHeart className="absolute right-[20px] top-[20px] text-[20px] text-red-700" />
       </div>
       <div className=" flex justify-center items-center p-[20px] ">
@@ -40,22 +40,22 @@ function Product({
           <div className="flex-col ">
             <h4
               
-              className="font-medium text-[18px]"
+              className="font-medium text-[14px] md:text-[18px]"
             >
               {name}
             </h4>
             <div className="flex justify-start items-center ">
-              <p className="text-[14px] font-normal text-[#9E9E9E]">{type}</p>
+              <p className="text-[10px] md:text-[14px] font-normal text-[#9E9E9E]">{type}</p>
             </div>
-            <p className="text-[10px] text-[#44E054] font-normal">{label}</p>
-            <p className="text-[10px] text-red-400 font-normal flex justify-end line-through">
+            <p className="text-[8px] md:text-[10px] text-[#44E054] font-normal">{label}</p>
+            <p className="text-[8px] md:text-[10px] text-red-400 font-normal flex justify-end line-through">
               {oldPrice}
             </p>
-            <p className="text-[16px] font-bold">{price}</p>  
+            <p className="text-[12px] md:text-[16px] font-bold">{price}</p>  
           </div>
           <div className="flex  justify-between items-end gap-[10px]">
           <div className="flex-col items-end ">
-            <div className="stars flex justify-start items-center gap-1">
+            <div className="stars flex justify-start items-center gap-1 text-[10px] md:text-[16px]">
               <FaStar className="text-[#EDCF5D] " />
               <FaStar className="text-[#EDCF5D] " />
               
@@ -67,7 +67,7 @@ function Product({
               {comments} <FaRegComment className="text-[12px]" />
             </div>
           </div>
-          <div className="p-[10px]  bg-[#141311] flex items-center justify-end  text-[24px] rounded-[8px] border hover:bg-white  text-white hover:text-black transition-all duration-300  ">
+          <div className="p-[6px] md:p-[10px]  bg-[#141311] flex items-center justify-end  text-[16px] md:text-[24px] rounded-[8px] border hover:bg-white  text-white hover:text-black transition-all duration-300  ">
             <FaShoppingBag  />
           </div>
         </div>
