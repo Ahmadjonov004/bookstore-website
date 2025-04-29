@@ -74,7 +74,7 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
               ) : (
                 <button
                   onClick={handleRegister}
-                  className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 active:scale-95 transition"
+                  className="px-2 md:px-4 py-1 md:py-2 bg-black text-white rounded hover:bg-gray-800 active:scale-95 transition"
                 >
                   Kirish
                 </button>

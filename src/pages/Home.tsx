@@ -1,6 +1,6 @@
 import Banner from "../components/banner/Banner";
 import Header from "../components/header/Header";
-import Collection from "@/components/collection/Collection";
+// import Collection from "@/components/collection/Collection";
 import Products from "@/components/products/Products";
 import Testimonial from "@/components/testimonial/Testimonial";
 import FooterBanner from "@/components/banner/FooterBanner";
@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
       <Banner />
 
       {/* Collection */}
-      <Collection />
+      {/* <Collection /> */}
 
       {/* Products */}
       <Products />
