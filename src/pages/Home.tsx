@@ -5,7 +5,7 @@ import Testimonial from "@/components/testimonial/Testimonial";
 import FooterBanner from "@/components/banner/FooterBanner";
 import Footer from "@/components/footer/Footer";
 import { useState, useEffect } from "react";
-import Accordionn from "@/components/accordion/accordionn";
+import Accordionn from "../components/accordion/accordionn";
 import SlideBanner from "@/components/banner/SlideBanner";
 
 interface HomeProps {
