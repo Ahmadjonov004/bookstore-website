@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+
 function Accordionn() {
   return (
     <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
