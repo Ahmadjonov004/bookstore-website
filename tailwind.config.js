@@ -52,7 +52,15 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		},
+  		},animation: {
+			'fade-in': 'fadeIn 0.3s ease-out',
+		  },
+		  keyframes: {
+			fadeIn: {
+			  '0%': { opacity: 0 },
+			  '100%': { opacity: 1 },
+			},
+		  },
 		  keyframes: {
 			"accordion-down": {
 			  from: { height: "0" },
