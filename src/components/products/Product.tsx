@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 interface ProductProps {
+  id:number
   image: string;
   name: string;
   type: string;
@@ -18,6 +19,7 @@ interface ProductProps {
   comments?: number;
 }
 function Product({
+  id,
   image,
   name,
   type,
@@ -30,13 +32,13 @@ function Product({
   const navigate = useNavigate();
   return (
     <div className="w-full shadow-custom rounded-[6px]  duration-300 hover ">
-      <div className="relative bg-[#EDEEF2] rounded-tl-[6px] rounded-tr-[6px] "  onClick={() => navigate(`/productDetail/${name}`)}>
+      <div className="relative bg-[#EDEEF2] rounded-tl-[6px] rounded-tr-[6px] "  onClick={() => navigate(`/productDetail/${id}`)}>
         {discount && <div className="discount">{discount}</div>}
         <img src={image} alt={name}  className="h-[160px] md:h-64 "/>
-        <FaRegHeart className="absolute right-[20px] top-[20px] text-[20px] text-red-700" />
+        <FaRegHeart className="absolute right-[12px]  md:right-[20px] top-[12px]  md:top-[20px] text-[16px] md:text-[20px] text-red-700 " />
       </div>
-      <div className=" flex justify-center items-center p-[20px] ">
-        <div className=" ">
+      <div className=" flex justify-center items-center p-[10px] md:p-[20px] ">
+        <div className=" flex-col w-full ">
           <div className="flex-col ">
             <h4
               className="font-medium text-[14px] md:text-[18px]"

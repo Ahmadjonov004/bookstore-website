@@ -18,7 +18,7 @@ function SlideBanner() {
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center px-4">
-          <h2 className="text-xl md:text-4xl font-bold mb-2">📚 Eng yangi kitoblar shu yerda!</h2>
+          <h2 className="text-xl md:text-4xl font-bold mb-2">Eng yangi kitoblar shu yerda!</h2>
           <p className="text-[12px] md:text-lg mb-4">Har hafta yangilanadigan bestsellerlar jamlanmasi.</p>
           <button className="bg-yellow-500 hover:bg-yellow-600 px-5 py-1 md:py-2 rounded-full text-[12px] md:text-base transition">Ko‘rish</button>
         </div>
@@ -34,7 +34,7 @@ function SlideBanner() {
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2">🚚 Bepul yetkazib berish!</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-2"> Bepul yetkazib berish!</h2>
           <p className="text-sm md:text-lg mb-4">100 000 so‘mdan ortiq xaridlar uchun!</p>
           <button className="bg-blue-500 hover:bg-blue-600 px-5 py-1 md:py-2 rounded-full text-sm md:text-base transition">Hozir buyurtma berish</button>
         </div>
@@ -50,7 +50,7 @@ function SlideBanner() {
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center px-4">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2">🎉 Chegirmalar haftaligi boshlandi!</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-2"> Chegirmalar haftaligi boshlandi!</h2>
           <p className="text-sm md:text-lg mb-4">30% gacha chegirmalar sizni kutmoqda!</p>
           <button className="bg-pink-500 hover:bg-pink-600 px-5 py-1 md:py-2 rounded-full text-sm md:text-base transition">Aksiyani ko‘rish</button>
         </div>

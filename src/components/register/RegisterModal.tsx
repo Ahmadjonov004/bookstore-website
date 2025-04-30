@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import SmsVerificationModal from '../smsCodeModal/SmsCodeModal'; 
+import SmsVerificationModal from '../smsCodeModal/SmsCodeModal';
+
 const LOCAL_STORAGE_KEY = "registerModal";
 
 interface RegisterModalProps {
   onClose: () => void;
-  onSuccess: () => void;
+  onSuccess: (token: string) => void; // tokenni qabul qiladigan tip
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => {
@@ -26,7 +27,6 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!accepted) {
       alert("Iltimos, ommaviy ofertaga rozilik bering.");
       return;
@@ -56,9 +56,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              F.I.SH
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">F.I.SH</label>
             <input
               type="text"
               value={fullName}
@@ -70,9 +68,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Yashash manzil
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Yashash manzil</label>
             <input
               type="text"
               value={address}
@@ -84,9 +80,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Telefon raqam
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Telefon raqam</label>
             <input
               type="tel"
               value={phone}
@@ -123,7 +117,11 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
         <SmsVerificationModal
           phone={phone}
           onClose={() => setShowSmsModal(false)}
-          onSuccess={onSuccess}
+          onSuccess={(token: string) => {
+            localStorage.setItem("token", token); // tokenni saqlash
+            setShowSmsModal(false);
+            onSuccess(token); // tokenni yuqoriga uzatish
+          }}
         />
       )}
     </div>
