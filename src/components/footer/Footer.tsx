@@ -15,7 +15,7 @@ function Footer() {
                   href="tel:+998976611747"
                   className="text-xs md:text-[16px] font-medium cursor-pointer"
                 >
-                  +998976611747
+                  +998976665544
                 </a>
             </div>
             <div className=" flex flex-col gap-[6px] ">
@@ -59,9 +59,9 @@ function Footer() {
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Ommaviy oferta </div>
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Maxfiylik siyosati</div>
           <div className="flex text-xl gap-3 text-[#808080]">
-          <a href="https://t.me/ahmadjonov004"><FaTelegramPlane /></a>
-           <a href="https://www.facebook.com/ahmdjonov004"><CiFacebook /></a>
-          <a href="https://www.instagram.com/ahmadjonov004/"><FaInstagram /></a>
+          <a href="https://t.me/+998903715349"><FaTelegramPlane /></a>
+           <a href="https://www.facebook.com/Shahnoza"><CiFacebook /></a>
+          <a href="https://www.instagram.com/b1ntu_usmon/"><FaInstagram /></a>
           </div>
         </div>
       </div>

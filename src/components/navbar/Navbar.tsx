@@ -1,5 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { MdLocalPhone } from "react-icons/md";
+import LanguageSelector from "../language/LanguageSelector";
 function Navbar() {
   return (
     <div>
@@ -11,11 +12,7 @@ function Navbar() {
               &nbsp; <p className="text-xs">Farg'ona</p>
             </div>
             <div className="flex gap-5 md:gap-10 navbarRight ">
-              <select className="p-1 text-xs md:text-sm border rounded bg-[#EDEEF2] ">
-                <option value="uz">O'zb</option>
-                <option value="ru">Русс</option>
-                <option value="en">Eng</option>
-              </select>
+              <LanguageSelector/>
               <div className="flex items-center justify-center cursor-pointer phone">
                 <MdLocalPhone />
                 &nbsp;
@@ -23,7 +20,7 @@ function Navbar() {
                   href="tel:+998976611747"
                   className="text-xs md:text-sm  hover:text-gray-600"
                 >
-                  +998976611747
+                  +998976665544
                 </a>
               </div>
             </div>
