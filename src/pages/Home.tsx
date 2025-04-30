@@ -5,7 +5,7 @@ import Testimonial from "@/components/testimonial/Testimonial";
 import FooterBanner from "@/components/banner/FooterBanner";
 import Footer from "@/components/footer/Footer";
 import { useState, useEffect } from "react";
-import Accordionn from "../components/accordion/Accordionn";
+import Temp from "../components/accordion/Temp";
 import SlideBanner from "@/components/banner/SlideBanner";
 
 interface HomeProps {
@@ -43,7 +43,7 @@ const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
       <Products />
 
        {/* accordion */}
-       <Accordionn/>
+       <Temp/>
 
       {/* Testimonials */}
       <Testimonial />

@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 
 
-function Accordionn() {
+function Temp() {
   return (
     <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
       <div className="text-[25px] md:text-[35px] font-medium my-[10px]">Faq</div>
@@ -51,4 +51,4 @@ function Accordionn() {
   );
 }
 
-export default Accordionn;
+export default Temp;
