@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 interface SmsVerificationModalProps {
   phone: string;
   onClose: () => void;
-  onSuccess: (token: string) => void; // token qabul qiladigan tip
+  onSuccess: (token: string) => void; 
 }
 
 const SmsCodeModal: React.FC<SmsVerificationModalProps> = ({ phone, onClose, onSuccess }) => {
@@ -26,8 +26,8 @@ const SmsCodeModal: React.FC<SmsVerificationModalProps> = ({ phone, onClose, onS
     const enteredCode = code.join('');
     if (enteredCode.length === 6) {
       console.log("Tasdiqlash kodi:", enteredCode);
-      const token = "fake-token"; // Bu yerda haqiqiy tokenni olish kerak
-      onSuccess(token); // tokenni onSuccess funksiyasiga yuborish
+      const token = "fake-token";
+      onSuccess(token); 
     } else {
       alert("Iltimos, 6 xonali kodni to‘liq kiriting.");
     }

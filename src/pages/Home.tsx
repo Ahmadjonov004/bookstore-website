@@ -22,7 +22,8 @@ const Home: React.FC<HomeProps> = ({ isRegistered, onLoginClick }) => {
       setIsLoggedIn(true);
     }
   }, []);
-
+ 
+  
   useEffect(() => {
     setIsLoggedIn(isRegistered);
   }, [isRegistered]);

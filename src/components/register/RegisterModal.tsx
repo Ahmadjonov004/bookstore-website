@@ -5,7 +5,7 @@ const LOCAL_STORAGE_KEY = "registerModal";
 
 interface RegisterModalProps {
   onClose: () => void;
-  onSuccess: (token: string) => void; // tokenni qabul qiladigan tip
+  onSuccess: (token: string) => void; 
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => {
@@ -118,9 +118,9 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onSuccess }) => 
           phone={phone}
           onClose={() => setShowSmsModal(false)}
           onSuccess={(token: string) => {
-            localStorage.setItem("token", token); // tokenni saqlash
+            localStorage.setItem("token", token); 
             setShowSmsModal(false);
-            onSuccess(token); // tokenni yuqoriga uzatish
+            onSuccess(token); 
           }}
         />
       )}

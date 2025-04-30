@@ -121,7 +121,7 @@ function Products() {
       <div className="container max-w-[1200px] px-[10px] mx-auto">
         <div className=" text-[25px] md:text-[35px] font-medium my-[10px]">Kitoblar</div>
         <FilterItems />
-        <div className="products w-full grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-[15px] md:gap-[30px]">
+        <div className="products w-full grid my-[20px] grid-cols-[repeat(auto-fill,minmax(120px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-[15px] md:gap-[30px]">
           {products.map((product) => (
             <Product key={product.id} {...product} />
           ))}
