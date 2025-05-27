@@ -8,7 +8,7 @@ function Footer() {
       <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
         <div className="Footer w-full flex justify-between pb-[30px] md:pb-[60px]">
           <div className="firstItem flex flex-col gap-[20px]">
-            <div className="text-[20px] font-semibold md:font-bold uppercase">BookShop</div>
+            <div className="text-[20px] font-semibold md:font-bold uppercase">Apex Shop</div>
             <div className="flex flex-col">
               <p className="text-xs md:text-sm font-light">Qo’llab quvvatlash</p>
               <a
@@ -59,9 +59,9 @@ function Footer() {
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Ommaviy oferta </div>
           <div className="text-[10px] sm:text-xs font-normal text-[#808080]">Maxfiylik siyosati</div>
           <div className="flex text-xl gap-3 text-[#808080]">
-          <a href="https://t.me/+998903715349"><FaTelegramPlane /></a>
-           <a href="https://www.facebook.com/Shahnoza"><CiFacebook /></a>
-          <a href="https://www.instagram.com/b1ntu_usmon/"><FaInstagram /></a>
+          <a href="https://t.me/+998976611747"><FaTelegramPlane /></a>
+           <a href="https://www.facebook.com/asilbek"><CiFacebook /></a>
+          <a href="https://www.instagram.com/ahmadjonov004/"><FaInstagram /></a>
           </div>
         </div>
       </div>

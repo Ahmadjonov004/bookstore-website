@@ -44,7 +44,7 @@ function Header({ isLoggedIn, setIsLoggedIn }: HeaderProps) {
       <div className="headerSection w-full mt-2">
         <div className="container max-w-[1200px] px-[10px] mx-auto my-0">
           <div className="header flex items-center justify-between w-full py-2 md:py-3">
-            <div className="logo text-xl font-bold">BookShop</div>
+            <div className="logo text-xl font-bold">Apex Shop</div>
 
             <div className="hidden md:flex items-center justify-between py-2 px-4 border-2 search rounded-xl">
               <input
